@@ -1,0 +1,7 @@
+{
+	"name": "Local-integrationRuntime",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "Esta integración se utilizará para poder consumir datos desde una base de datos de SQL server alojada localmente"
+	}
+}
