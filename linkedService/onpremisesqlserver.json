@@ -1,0 +1,23 @@
+{
+	"name": "onpremisesqlserver",
+	"properties": {
+		"description": "Esta será la cadena de conexión para consumir de la base de datos local de sql server",
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "Integrated Security=False;Data Source=DESKTOP-E4688IK\\SQLSERVER;Initial Catalog=AdventureWorksLT2019;User ID=dgkd",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault_adf",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "password"
+			}
+		},
+		"connectVia": {
+			"referenceName": "Local-integrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
