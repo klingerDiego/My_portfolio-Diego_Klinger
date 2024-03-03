@@ -1,0 +1,11 @@
+{
+	"name": "AzureKeyVault_adf",
+	"properties": {
+		"description": "Esta es la key vault para el servicio de enlace con el origen de datos local",
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://kv-project-dgkd.vault.azure.net/"
+		}
+	}
+}
