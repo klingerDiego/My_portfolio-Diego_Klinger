@@ -1,0 +1,17 @@
+{
+	"name": "adf_to_AzureDataLakeStorage",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "Este es el enlace de conexión de data factory hacia datalake storage",
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://datalakegen2projectdgkd.dfs.core.windows.net/",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIxNzVmOGExYS03NWIxLTRkOTUtODRlYi1jMTMwZDRjMzU3Y2QiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "Local-integrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
