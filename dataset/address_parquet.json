@@ -1,0 +1,20 @@
+{
+	"name": "address_parquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "adf_to_AzureDataLakeStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "Bronze",
+				"fileSystem": "data-engineering-project"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
