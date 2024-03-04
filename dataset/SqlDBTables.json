@@ -1,0 +1,13 @@
+{
+	"name": "SqlDBTables",
+	"properties": {
+		"description": "Esta será la conexión para consumir todas las tablas de SQL server local",
+		"linkedServiceName": {
+			"referenceName": "onpremisesqlserver",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": []
+	}
+}
