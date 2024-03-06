@@ -26,7 +26,7 @@
 					"value": "@{concat(dataset().schemaname,'/',dataset().tablename,'/')}",
 					"type": "Expression"
 				},
-				"fileSystem": "data-engineering-project"
+				"fileSystem": "bronze"
 			},
 			"compressionCodec": "snappy"
 		},
