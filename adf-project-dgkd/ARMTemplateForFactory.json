@@ -253,10 +253,13 @@
 					"location": {
 						"type": "AzureBlobFSLocation",
 						"fileName": {
-							"value": "@{concat(dataset().schemaname,'/',dataset().tablename,'/',dataset().tablename, '.parquet')}",
+							"value": "@{concat(dataset().tablename, '.parquet')}",
 							"type": "Expression"
 						},
-						"folderPath": "Bronze",
+						"folderPath": {
+							"value": "@{concat(dataset().schemaname,'/',dataset().tablename,'/')}",
+							"type": "Expression"
+						},
 						"fileSystem": "data-engineering-project"
 					},
 					"compressionCodec": "snappy"
