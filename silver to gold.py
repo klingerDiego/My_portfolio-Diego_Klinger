@@ -77,7 +77,7 @@ for table in table_name:
         df = df.withColumnRenamed(old_column, new_col_name)
     
     #Aplicar las tranformaciones a las tablas fisicas
-    output_path='/mnt/gold/SalestLT/'+table+'/' 
+    output_path='/mnt/gold/SalesLT/'+table+'/' 
     df.write.format('delta').mode('overwrite').save(output_path)
 
 
