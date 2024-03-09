@@ -11,6 +11,9 @@
 		"onpremisesqlserver_connectionString": {
 			"value": "Integrated Security=False;Data Source=DESKTOP-E4688IK\\SQLSERVER;Initial Catalog=AdventureWorksLT2019;User ID=dgkd"
 		},
+		"serverlessSQLdb_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=snya-project-dgkd-ondemand.sql.azuresynapse.net;Initial Catalog=gold_db"
+		},
 		"snya-project-dgkd-WorkspaceDefaultSqlServer_connectionString": {
 			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:snya-project-dgkd.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
 		},

@@ -16,6 +16,11 @@
 			"metadata": "Cadena protegida para \"connectionString\"de \"onpremisesqlserver\"",
 			"defaultValue": "Integrated Security=False;Data Source=DESKTOP-E4688IK\\SQLSERVER;Initial Catalog=AdventureWorksLT2019;User ID=dgkd"
 		},
+		"serverlessSQLdb_connectionString": {
+			"type": "secureString",
+			"metadata": "Cadena protegida para \"connectionString\"de \"serverlessSQLdb\"",
+			"defaultValue": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=snya-project-dgkd-ondemand.sql.azuresynapse.net;Initial Catalog=gold_db"
+		},
 		"snya-project-dgkd-WorkspaceDefaultSqlServer_connectionString": {
 			"type": "secureString",
 			"metadata": "Cadena protegida para \"connectionString\"de \"snya-project-dgkd-WorkspaceDefaultSqlServer\"",
@@ -38,6 +43,105 @@
 		"workspaceId": "[concat('Microsoft.Synapse/workspaces/', parameters('workspaceName'))]"
 	},
 	"resources": [
+		{
+			"name": "[concat(parameters('workspaceName'), '/CreateViewsGold')]",
+			"type": "Microsoft.Synapse/workspaces/pipelines",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"activities": [
+					{
+						"name": "Get_Tablenames",
+						"type": "GetMetadata",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"dataset": {
+								"referenceName": "goldTables",
+								"type": "DatasetReference",
+								"parameters": {}
+							},
+							"fieldList": [
+								"childItems"
+							],
+							"storeSettings": {
+								"type": "AzureBlobFSReadSettings",
+								"recursive": true,
+								"enablePartitionDiscovery": false
+							},
+							"formatSettings": {
+								"type": "BinaryReadSettings"
+							}
+						}
+					},
+					{
+						"name": "Cretae_view_for_each_table",
+						"type": "ForEach",
+						"dependsOn": [
+							{
+								"activity": "Get_Tablenames",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"userProperties": [],
+						"typeProperties": {
+							"items": {
+								"value": "@activity('Get_Tablenames').output.childItems",
+								"type": "Expression"
+							},
+							"isSequential": false,
+							"activities": [
+								{
+									"name": "Create_view_table_gold",
+									"type": "SqlServerStoredProcedure",
+									"dependsOn": [],
+									"policy": {
+										"timeout": "0.12:00:00",
+										"retry": 0,
+										"retryIntervalInSeconds": 30,
+										"secureOutput": false,
+										"secureInput": false
+									},
+									"userProperties": [],
+									"typeProperties": {
+										"storedProcedureName": "[dbo].[CreateSQLServerlessView_gold]",
+										"storedProcedureParameters": {
+											"ViewName": {
+												"value": {
+													"value": "@item().name",
+													"type": "Expression"
+												},
+												"type": "String"
+											}
+										}
+									},
+									"linkedServiceName": {
+										"referenceName": "serverlessSQLdb",
+										"type": "LinkedServiceReference"
+									}
+								}
+							]
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('workspaceId'), '/datasets/goldTables')]",
+				"[concat(variables('workspaceId'), '/linkedServices/serverlessSQLdb')]"
+			]
+		},
 		{
 			"name": "[concat(parameters('workspaceName'), '/copy_all_tables_local_to_datalake')]",
 			"type": "Microsoft.Synapse/workspaces/pipelines",
@@ -458,6 +562,29 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('workspaceName'), '/goldTables')]",
+			"type": "Microsoft.Synapse/workspaces/datasets",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "snya-project-dgkd-WorkspaceDefaultStorage",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Binary",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"folderPath": "SalesLT",
+						"fileSystem": "gold"
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('workspaceId'), '/linkedServices/snya-project-dgkd-WorkspaceDefaultStorage')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('workspaceName'), '/AzureDatabricks')]",
 			"type": "Microsoft.Synapse/workspaces/linkedServices",
 			"apiVersion": "2019-06-01-preview",
@@ -546,6 +673,25 @@
 			"dependsOn": [
 				"[concat(variables('workspaceId'), '/integrationRuntimes/Local-integrationRuntime')]",
 				"[concat(variables('workspaceId'), '/linkedServices/AzureKeyVault_adf')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/serverlessSQLdb')]",
+			"type": "Microsoft.Synapse/workspaces/linkedServices",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"annotations": [],
+				"type": "AzureSqlDatabase",
+				"typeProperties": {
+					"connectionString": "[parameters('serverlessSQLdb_connectionString')]"
+				},
+				"connectVia": {
+					"referenceName": "AutoResolveIntegrationRuntime",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('workspaceId'), '/integrationRuntimes/AutoResolveIntegrationRuntime')]"
 			]
 		},
 		{
@@ -662,7 +808,7 @@
 						"language": "sql"
 					},
 					"currentConnection": {
-						"databaseName": "master",
+						"databaseName": "gold_db",
 						"poolName": "Built-in"
 					},
 					"resultLimit": 5000
