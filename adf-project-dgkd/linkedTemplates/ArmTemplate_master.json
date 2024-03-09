@@ -16,6 +16,10 @@
 			"metadata": "Secure string for 'connectionString' of 'onpremisesqlserver'",
 			"defaultValue": "Integrated Security=False;Data Source=DESKTOP-E4688IK\\SQLSERVER;Initial Catalog=AdventureWorksLT2019;User ID=dgkd"
 		},
+		"AzureDatabricks_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "0302-231624-vvtaavlh"
+		},
 		"AzureKeyVault_adf_properties_typeProperties_baseUrl": {
 			"type": "string",
 			"defaultValue": "https://kv-project-dgkd.vault.azure.net/"
@@ -23,10 +27,6 @@
 		"adf_to_AzureDataLakeStorage_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://datalakegen2projectdgkd.dfs.core.windows.net/"
-		},
-		"AzureDatabricks_properties_typeProperties_existingClusterId": {
-			"type": "string",
-			"defaultValue": "0302-231624-vvtaavlh"
 		},
 		"containerUri": {
 			"type": "string",
@@ -64,11 +64,11 @@
 					"AzureKeyVault_adf_properties_typeProperties_baseUrl": {
 						"value": "[parameters('AzureKeyVault_adf_properties_typeProperties_baseUrl')]"
 					},
-					"adf_to_AzureDataLakeStorage_properties_typeProperties_url": {
-						"value": "[parameters('adf_to_AzureDataLakeStorage_properties_typeProperties_url')]"
-					},
 					"AzureDatabricks_properties_typeProperties_existingClusterId": {
 						"value": "[parameters('AzureDatabricks_properties_typeProperties_existingClusterId')]"
+					},
+					"adf_to_AzureDataLakeStorage_properties_typeProperties_url": {
+						"value": "[parameters('adf_to_AzureDataLakeStorage_properties_typeProperties_url')]"
 					}
 				}
 			},

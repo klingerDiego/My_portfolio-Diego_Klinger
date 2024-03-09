@@ -11,14 +11,14 @@
 		"onpremisesqlserver_connectionString": {
 			"value": "Integrated Security=False;Data Source=DESKTOP-E4688IK\\SQLSERVER;Initial Catalog=AdventureWorksLT2019;User ID=dgkd"
 		},
+		"AzureDatabricks_properties_typeProperties_existingClusterId": {
+			"value": "0302-231624-vvtaavlh"
+		},
 		"AzureKeyVault_adf_properties_typeProperties_baseUrl": {
 			"value": "https://kv-project-dgkd.vault.azure.net/"
 		},
 		"adf_to_AzureDataLakeStorage_properties_typeProperties_url": {
 			"value": "https://datalakegen2projectdgkd.dfs.core.windows.net/"
-		},
-		"AzureDatabricks_properties_typeProperties_existingClusterId": {
-			"value": "0302-231624-vvtaavlh"
 		}
 	}
 }
