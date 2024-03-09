@@ -17,6 +17,9 @@
 		"adf_to_AzureDataLakeStorage_properties_typeProperties_url": {
 			"value": "https://datalakegen2projectdgkd.dfs.core.windows.net/"
 		},
+		"AzureDatabricks_properties_typeProperties_existingClusterId": {
+			"value": "0302-231624-vvtaavlh"
+		},
 		"containerUri": {
 			"value": ""
 		},

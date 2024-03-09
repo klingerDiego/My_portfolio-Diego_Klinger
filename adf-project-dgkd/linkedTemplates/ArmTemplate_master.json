@@ -24,6 +24,10 @@
 			"type": "string",
 			"defaultValue": "https://datalakegen2projectdgkd.dfs.core.windows.net/"
 		},
+		"AzureDatabricks_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "0302-231624-vvtaavlh"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -62,6 +66,9 @@
 					},
 					"adf_to_AzureDataLakeStorage_properties_typeProperties_url": {
 						"value": "[parameters('adf_to_AzureDataLakeStorage_properties_typeProperties_url')]"
+					},
+					"AzureDatabricks_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('AzureDatabricks_properties_typeProperties_existingClusterId')]"
 					}
 				}
 			},
