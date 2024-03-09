@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "snya-project-dgkd"
+		},
+		"adf_to_AzureDataLakeStorage_accountKey": {
+			"value": ""
+		},
+		"onpremisesqlserver_connectionString": {
+			"value": "Integrated Security=False;Data Source=DESKTOP-E4688IK\\SQLSERVER;Initial Catalog=AdventureWorksLT2019;User ID=dgkd"
+		},
+		"snya-project-dgkd-WorkspaceDefaultSqlServer_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:snya-project-dgkd.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
+		"AzureKeyVault_adf_properties_typeProperties_baseUrl": {
+			"value": "https://kv-project-dgkd.vault.azure.net/"
+		},
+		"adf_to_AzureDataLakeStorage_properties_typeProperties_url": {
+			"value": "https://datalakegen2projectdgkd.dfs.core.windows.net/"
+		},
+		"snya-project-dgkd-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://datalakegen2projectdgkd.dfs.core.windows.net"
+		}
+	}
+}
