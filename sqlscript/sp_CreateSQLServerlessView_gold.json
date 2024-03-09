@@ -1,0 +1,17 @@
+{
+	"name": "sp_CreateSQLServerlessView_gold",
+	"properties": {
+		"content": {
+			"query": "-- Cambia el contexto a la base de datos 'gold_db'\nUSE gold_db\nGO\n\n-- Define o altera un procedimiento almacenado llamado 'CreateSQLServerlessView_gold'\nCREATE OR ALTER PROC CreateSQLServerlessView_gold @ViewName NVARCHAR(100)\nAS\nBEGIN\n    -- Declara una variable para almacenar la instrucción SQL dinámica\n    DECLARE @statement VARCHAR(max)\n\n    -- Construye dinámicamente la instrucción SQL para crear o alterar una vista serverless\n    SET @statement = N'CREATE OR ALTER VIEW ' + @ViewName + ' AS\n        SELECT *\n        FROM\n        OPENROWSET(\n            BULK ''https://datalakegen2projectdgkd.dfs.core.windows.net/gold/SalesLT/'+ @ViewName + '/'',\n            FORMAT = ''DELTA''\n        ) AS [result]'\n\n    -- Ejecuta la instrucción SQL dinámica\n    EXECUTE (@statement)\nEND\nGO\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
