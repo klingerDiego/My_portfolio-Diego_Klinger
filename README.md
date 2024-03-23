@@ -30,7 +30,7 @@
     <h2 align="left">Algunos de mis proyectos son:</h2>
     <h3 align="centar">Proyecto de data engineering con azure de principio a fin</h3>
     <h3></h3>
-    <img src="https://i.postimg.cc/MGgxM9bT/1.png" height="800" alt="pagina 1 proyecto" />
+    <img src="https://i.postimg.cc/MGgxM9bT/1.png" style="max-width: 100%; height: auto;" alt="pagina 1 proyecto" />
   <img width="12" />
   
 </div>
