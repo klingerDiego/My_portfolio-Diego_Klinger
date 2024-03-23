@@ -134,7 +134,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Repos/klingerdiaz@gmail.com/data-engineering-project/bronze to silver"
+					"notebookPath": "/Repos/klingerdiaz@gmail.com/data-engineering-project/Data engineering project/bronze to silver"
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricks",
@@ -161,7 +161,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Repos/klingerdiaz@gmail.com/data-engineering-project/silver to gold"
+					"notebookPath": "/Repos/klingerdiaz@gmail.com/data-engineering-project/Data engineering project/silver to gold"
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricks",
