@@ -1,0 +1,9 @@
+{
+	"name": "adf-project-dgkd",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "2680806a-70e9-4a45-be85-13adb6beb02c",
+		"tenantId": "8fc226b4-6c3a-4a5a-9600-b1c27e0a3de0"
+	}
+}

@@ -1,5 +1,6 @@
 {
 	"name": "onpremisesqlserver",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"description": "Esta será la cadena de conexión para consumir de la base de datos local de sql server",
 		"annotations": [],
