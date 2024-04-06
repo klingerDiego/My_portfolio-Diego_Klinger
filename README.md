@@ -37,7 +37,7 @@
 <br><br>
 
 <div align="center">
-    <h2>Algunos de mis proyectos son:</h2>
+    <h2>Mis proyectos son:</h2>
     <h3 align="centar">Proyecto de data engineering con azure de principio a fin</h3>
     <h3></h3>
     <img src="https://i.postimg.cc/3rjQwL47/1.jpg" style="max-width: 100%; height: auto;" alt="pagina 1 proyecto" />
