@@ -8,12 +8,13 @@
   </a>
   <a href="https://github.com/klingerDiego/My_portfolio-Diego_Klinger">
     <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" height="50" alt="github logo">
-  </a>  Mi nombre es Diego Klinger.
+  </a>  
+  <br>
+  Mi nombre es Diego Klinger.
 
 </h3>
 
-<h3 align="left">Soy un data Analyst, futuro data engineer y data scientist, me apasiona todo lo relaciona con el mundo de los datos, y como con ellos puedo aportar al mundo.</h3>
-<h2></h2>
+<h3 align="left">Soy un data Analyst, futuro data engineer y data scientist, me apasiona todo lo relaciona con los datos, y como con ellos puedo aportar al mundo, generar conocimientos y resolver retos.</h3>
 <p align="left">✨ Aportando con datos desde Dic-2022. <br>📚 Aprendiendo todo los dias.<br>🎯 Alcanzando objetivos profesioneles. </p>
 
 <h3 align="left">Tengo experiencia con:</h3>
