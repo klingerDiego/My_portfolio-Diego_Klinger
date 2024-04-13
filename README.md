@@ -1,4 +1,4 @@
-<h1 align="left">Hola 👋 Mucho gusto.</h1>
+<h1 align="left">Hola 👋🏼 Mucho gusto.</h1>
 
 <h3 align="left">
   <a href="https://www.linkedin.com/in/diego-klinger/">
