@@ -27,6 +27,10 @@
             text-decoration: underline; /* Subrayado al pasar el mouse */
         }
         .container {
+            max-width: 80%; /* Ancho máximo del contenido al 90% de la pantalla */
+            margin: 0 auto; /* Centrado horizontal */
+        }
+        .container_2 {
             max-width: 800px; /* Ancho máximo del contenido */
             margin: 0 auto; /* Centrado horizontal */
         }
@@ -40,48 +44,56 @@
         .slick-prev, .slick-next {
             font-size: 24px; /* Aumenta el tamaño de las flechas */
         }
+        .justified {
+        text-align: justify;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Hola 👋 Mucho gusto.</h1>
+    <div class="container_2">
+        <h1>Hola 👋🏼 Mucho gusto.</h1>
         <h3>
             <a href="https://www.linkedin.com/in/diego-klinger/">
-                <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" height="50" alt="linkedin logo">
+                <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" height="50" alt="linkedin logo" title="Mi linkedin">
             </a>
             <a href="https://github.com/klingerDiego/My_portfolio-Diego_Klinger">
-                <img src="https://i.postimg.cc/zXMD1MgF/image-github.png" height="50" alt="github logo">
+                <img src="https://i.postimg.cc/zXMD1MgF/image-github.png" height="50" alt="github logo" title="Mi portafolio">
             </a>  
             <br>
             Mi nombre es Diego Klinger.
         </h3>
-        <h3>Soy un Data Analyst, futuro Data Scientist, me apasiona todo lo relaciona con los datos, y como con ellos puedo aportar al mundo, generar conocimientos y resolver retos.</h3>
-        <p>✨ Aportando con datos desde Dic-2022. <br>📚 Aprendiendo todo los dias.<br>🎯 Alcanzando objetivos profesioneles. </p>
+        <h3 class="justified">Soy un Data Analyst y futuro Data Scientist, me apasiona todo lo relacionado con los datos, y como con ellos puedo aportar al mundo, generar conocimiento y resolver retos.</h3>
+        <p>📈 Aportando con datos desde Dic-2022.<br>🎯 Alcanzando objetivos profesionales.  <br>📚 Aprendiendo todos los días.</p>
         <h3>Tengo experiencia con:</h3>
         <div>
-            <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" height="50" alt="Python logo" />
+            <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" height="50" alt="Python logo" title="Python" />
             <img width="12" />
-            <img src="https://symbols.getvecta.com/stencil_28/61_sql-database-generic.90b41636a8.svg" height="50" alt="SQL logo" />
+            <img src="https://symbols.getvecta.com/stencil_28/61_sql-database-generic.90b41636a8.svg" height="50" alt="SQL logo" title="SQL" />
             <img width="12" />
-            <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/databricks_logo_icon_170295.png" height="50" alt="Databricks logo" />
+            <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/databricks_logo_icon_170295.png" height="50" alt="Databricks logo" title="Databricks" />
             <img width="12" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" height="50" alt="PBI logo" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" height="50" alt="PBI logo" title="Power BI" />
             <img width="12" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png" height="50" alt="Azure logo" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png" height="50" alt="Azure logo" title="Microsoft Azure" />
             <img width="12" />
-        </div>
+        </div>        
         <div class="project-images">
             <h2>Mis proyectos son:</h2>
             <div style="text-align: center;">
-                <h3>1. Proyecto de data engineering con azure de principio a fin.</h3>
-            </div>
-            <div class="slick-carousel">
-                <img src="https://i.postimg.cc/3rjQwL47/1.jpg" alt="pagina 1 proyecto" />
-                <img src="https://i.postimg.cc/brtGQx11/2.jpg" alt="pagina 2 proyecto" />
-                <img src="https://i.postimg.cc/qBz5CjZW/3.jpg" alt="pagina 3 proyecto" />
-                <img src="https://i.postimg.cc/Dm3S5ScH/4.jpg" alt="pagina 4 proyecto" />
+                <h3 style="display: inline;">1. Proyecto de data engineering con Azure de principio a fin.</h3>
+                <a href="https://github.com/klingerDiego/My_portfolio-Diego_Klinger/tree/main/Data%20engineering%20project" style="display: inline;">
+                    <img src="https://i.postimg.cc/zXMD1MgF/image-github.png" height="30" alt="github logo">
+                </a><br></br>              
             </div>
         </div>
+    </div> 
+    <div class="container">
+        <div class="slick-carousel">
+            <img src="https://i.postimg.cc/V68VFSH6/1.png" alt="pagina 1 proyecto" />
+            <img src="https://i.postimg.cc/fyWq6GsQ/2.png" alt="pagina 2 proyecto" />
+            <img src="https://i.postimg.cc/QtJnYXRq/3.png" alt="pagina 3 proyecto" />
+            <img src="https://i.postimg.cc/sDQvpvF7/4.png" alt="pagina 4 proyecto" />
+        </div> 
     </div>
     <!-- Agrega jQuery (necesario para Slick Carousel) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
