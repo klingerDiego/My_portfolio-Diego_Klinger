@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Proyectos - Diego Klinger</title>
+    <!-- Agrega la hoja de estilos de Slick Carousel -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Agrega la hoja de estilos del tema predeterminado de Slick Carousel -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <style>
+        body {
+            background-color: #121212; /* Color de fondo oscuro */
+            color: #ffffff; /* Color de texto blanco */
+            font-family: Arial, sans-serif; /* Fuente del texto */
+            padding: 20px;
+            margin: 0;
+        }
+        h1, h2, h3 {
+            margin-top: 0;
+        }
+        a {
+            color: #ffffff; /* Color de enlaces */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline; /* Subrayado al pasar el mouse */
+        }
+        .container {
+            max-width: 800px; /* Ancho máximo del contenido */
+            margin: 0 auto; /* Centrado horizontal */
+        }
+        .project-images {
+            margin-top: 20px;
+        }
+        .slick-carousel img {
+            max-width: 100%; /* Ajusta el tamaño de las imágenes al 100% del contenedor */
+            height: auto; /* Mantiene la proporción de aspecto */
+        }
+        .slick-prev, .slick-next {
+            font-size: 24px; /* Aumenta el tamaño de las flechas */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hola 👋 Mucho gusto.</h1>
+        <h3>
+            <a href="https://www.linkedin.com/in/diego-klinger/">
+                <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" height="50" alt="linkedin logo">
+            </a>
+            <a href="https://github.com/klingerDiego/My_portfolio-Diego_Klinger">
+                <img src="https://i.postimg.cc/zXMD1MgF/image-github.png" height="50" alt="github logo">
+            </a>  
+            <br>
+            Mi nombre es Diego Klinger.
+        </h3>
+        <h3>Soy un Data Analyst, futuro data engineer y data scientist, me apasiona todo lo relaciona con los datos, y como con ellos puedo aportar al mundo, generar conocimientos y resolver retos.</h3>
+        <p>✨ Aportando con datos desde Dic-2022. <br>📚 Aprendiendo todo los dias.<br>🎯 Alcanzando objetivos profesioneles. </p>
+        <h3>Tengo experiencia con:</h3>
+        <div>
+            <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" height="50" alt="Python logo" />
+            <img width="12" />
+            <img src="https://symbols.getvecta.com/stencil_28/61_sql-database-generic.90b41636a8.svg" height="50" alt="SQL logo" />
+            <img width="12" />
+            <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/databricks_logo_icon_170295.png" height="50" alt="Databricks logo" />
+            <img width="12" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" height="50" alt="PBI logo" />
+            <img width="12" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png" height="50" alt="Azure logo" />
+            <img width="12" />
+        </div>
+        <div class="project-images">
+            <h2>Mis proyectos son:</h2>
+            <div style="text-align: center;">
+                <h3>1. Proyecto de data engineering con azure de principio a fin.</h3>
+            </div>
+            <div class="slick-carousel">
+                <img src="https://i.postimg.cc/3rjQwL47/1.jpg" alt="pagina 1 proyecto" />
+                <img src="https://i.postimg.cc/brtGQx11/2.jpg" alt="pagina 2 proyecto" />
+                <img src="https://i.postimg.cc/qBz5CjZW/3.jpg" alt="pagina 3 proyecto" />
+                <img src="https://i.postimg.cc/Dm3S5ScH/4.jpg" alt="pagina 4 proyecto" />
+            </div>
+        </div>
+    </div>
+    <!-- Agrega jQuery (necesario para Slick Carousel) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Agrega la biblioteca de Slick Carousel -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Inicializa el carrusel -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.slick-carousel').slick({
+                arrows: true, // Flechas de navegación
+                dots: false, // Puntos de navegación
+                autoplay: false, // Desactiva la autoreproducción
+                prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
+                nextArrow: '<button type="button" class="slick-next">&#10095;</button>'
+            });
+        });
+    </script>
+</body>
+</html>
