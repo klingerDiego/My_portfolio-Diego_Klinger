@@ -1,13 +1,13 @@
 <h1 align="left">Hola 👋 Mucho gusto.</h1>
 
 <h3 align="left">
-  
+  </a>
   <a href="https://www.linkedin.com/in/diego-klinger/">
     <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" height="50" alt="linkedin logo">
-  
+  </a> 
   </a>
   <a href="https://github.com/klingerDiego/My_portfolio-Diego_Klinger">
-    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" height="50" alt="github logo">
+    <img src="https://i.postimg.cc/zXMD1MgF/image-github.png" height="50" alt="github logo">
   </a>  
   <br>
   Mi nombre es Diego Klinger.
@@ -46,5 +46,3 @@
     <img src="https://i.postimg.cc/Dm3S5ScH/4.jpg" style="max-width: 100%; height: auto;" alt="pagina 1 proyecto" />
 </div>
 <h2></h2>
-
-
