@@ -12,8 +12,8 @@
 
 </h3>
 
-<h3 align="left">Soy un data Analyst y futuro Data Scientist, me apasiona todo lo relaciona con los datos, y como con ellos puedo aportar al mundo, generar conocimientos y resolver retos.</h3>
-<p align="left">✨ Aportando con datos desde Dic-2022. <br>🎯 Alcanzando objetivos profesioneles. <br>📚 Aprendiendo todo los dias. </p>
+<h3 align="left">Soy un Data Analyst y futuro Data Scientist, me apasiona todo lo relacionado con los datos, y como con ellos puedo aportar al mundo, generar conocimiento y resolver retos.</h3>
+<p align="left">✨ Aportando con datos desde Dic-2022. <br>🎯 Alcanzando objetivos profesionales. <br>📚 Aprendiendo todos los dias. </p>
 
 <h3 align="left">Tengo experiencia con:</h3>
 
