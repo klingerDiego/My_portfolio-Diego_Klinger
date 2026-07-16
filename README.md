@@ -30,6 +30,6 @@
   <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" height="50" alt="PBI logo" title= "Power BI"/>
   <img width="12" />
 
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png" height="50" alt="Azure logo" title= "Microsoft Azure" />
+  <img src="https://swimburger.net/media/ppnn3pcl/azure.png" height="50" alt="Azure logo" title= "Microsoft Azure" />
   <img width="12" />
 <br><br>
