@@ -32,4 +32,7 @@
 
   <img src="https://swimburger.net/media/ppnn3pcl/azure.png" height="50" alt="Azure logo" title= "Microsoft Azure" />
   <img width="12" />
+  
+  <img src="https://1000marcas.net/wp-content/uploads/2021/05/sap-hana-logo.jpg" height="50" alt="Hana logo" title= "Microsoft Azure" />
+  <img width="12" />
 <br><br>
