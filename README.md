@@ -12,7 +12,7 @@
 
 </h3>
 
-<h3 align="left">Soy un Data Analyst y futuro Data Scientist, me apasiona todo lo relacionado con los datos, entender un negocio, sus necesidades y transformar los datos en productos de información valiosa para el negocio.</h3>
+<h3 align="left">Soy un Data Engineer, me apasiona todo lo relacionado con los datos, entender un negocio, sus necesidades y construir procesos que logren consumir, transformar y consolidar los datos bajos buenas practicas y gobierno, de modo que la información este lista para ser aprovechada por las areas de BI, negocio o IA.</h3>
 <p align="left">✨ Aportando con datos desde Dic-2022. <br>🎯 Alcanzando objetivos profesionales. <br>📚 Aprendiendo todos los dias. </p>
 
 <h3 align="left">Tengo experiencia con:</h3>
